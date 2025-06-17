@@ -53,10 +53,11 @@ class LSTM(nn.Module):
             torch.Tensor: Output tensor containing the hidden states for each time step,
                             of shape (batch_size, sequence_length, hidden_size).
         """
-        
+        device = x.device
+
         all_hidden = []
-        hidden = torch.zeros((x.size(0), self.hidden_size))
-        channel = torch.zeros((x.size(0), self.hidden_size))
+        hidden = torch.zeros((x.size(0), self.hidden_size), device=device)
+        channel = torch.zeros((x.size(0), self.hidden_size), device=device)
         
         for t in range(x.size(1)):
             x_t = x[:,t,:]
@@ -70,6 +71,8 @@ class LSTM(nn.Module):
             all_hidden.append(hidden)
             
         return torch.stack(all_hidden, dim=1)
+
+
 
 class ActivityLSTM(nn.Module):
     def __init__(self, input_shape, num_classes, dropout=0.3):
