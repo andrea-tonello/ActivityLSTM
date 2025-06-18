@@ -79,17 +79,17 @@ class ActivityLSTM(nn.Module):
         super().__init__()
         
         # LSTM layers
-        self.lstm1 = LSTM(input_size=input_shape, hidden_size=256)
+        self.lstm1 = LSTM(input_size=input_shape, hidden_size=128)
         self.dropout1 = nn.Dropout(dropout)
         
-        self.lstm2 = LSTM(input_size=256, hidden_size=128)
+        self.lstm2 = LSTM(input_size=128, hidden_size=64)
         self.dropout2 = nn.Dropout(dropout)
         
-        self.lstm3 = LSTM(input_size=128, hidden_size=64)
+        self.lstm3 = LSTM(input_size=64, hidden_size=32)
         
         # Fully connected layers
-        self.fc1 = nn.Linear(64, 32)
-        self.fc2 = nn.Linear(32, num_classes)
+        self.fc1 = nn.Linear(32, 16)
+        self.fc2 = nn.Linear(16, num_classes)
         
     def forward(self, x):
         # LSTM layers
