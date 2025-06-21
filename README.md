@@ -6,7 +6,6 @@ This repository contains an implementation from scratch of a Long Short-Term Mem
 
 The dataset was collected from 30 subjects performing the six aforementioned activities while carrying a waist-mounted smartphone with embedded accelerometer and gyroscope sensors. Each record contains 561 features derived from sensor signals.
 
-- **Source:** [Kaggle - Human Activity Recognition with Smartphones](https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphones)
 - **Activities:** Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, Laying
 - **Sensors:** 3-axial linear acceleration and angular velocity (50 Hz update)
 - **Train Size:** 7352 $\times$ 563 (70%)
