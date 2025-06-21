@@ -22,10 +22,10 @@ This project implements from scratch an LSTM-based model to capture the temporal
 - **Input:** Time-series segments of sensor data
 - **Layers:**
   - 3 LSTM Layers (128, 64, 32) with dropout 0.3
-  - 2 final Fully Connected layers with softmax
+  - 2 final Fully Connected Layers (32, 16) with softmax
 - **Output:** One of the six activity classes
 
 ## Results
 
-- **Test Accuracy:** 91.4%
+- **Test Accuracy:** ~90-92%
 
